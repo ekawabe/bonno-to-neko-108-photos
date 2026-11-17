@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>煩悩とねこ108 ― 紹介資料</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="煩悩とねこ108">
+<meta property="og:title" content="煩悩とねこ108 ― 108の煩悩をめぐる、ねこだらけのボードゲーム">
+<meta property="og:description" content="場の数字を108に近づけていく、バースト寸前のドキドキとねこの癒やしのゲーム。166枚全部ちがうねこ、2〜7匹対戦、ブラウザだけで登録不要。">
+<meta property="og:url" content="https://bonno-to-neko-108.onrender.com/intro.html">
+<meta property="og:image" content="https://ekawabe.github.io/bonno-to-neko-108-photos/78.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="場の数字を108に近づけていく、バースト寸前のドキドキとねこの癒やしのゲーム。166枚全部ちがうねこ、2〜7匹対戦、ブラウザだけで登録不要。">
+<link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#4a3421; --ink-soft:#7a5c3e; --gold:#c9a227; --gold-deep:#a8842a;
+    --cream:#fdf6e9; --paper:#fffaf0; --red:#c0392b;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Yusei Magic","Hiragino Maru Gothic ProN",sans-serif;
+    color:var(--ink); background:var(--cream); line-height:1.75;
+    background-image:radial-gradient(rgba(201,162,39,.10) 2.2px, transparent 2.6px);
+    background-size:34px 34px;
+  }
+  .wrap{max-width:880px;margin:0 auto;padding:28px 18px 56px}
+  /* hero */
+  .hero{text-align:center;padding:26px 10px 8px}
+  .badge{display:inline-block;background:var(--gold);color:#fff;border-radius:999px;
+    padding:2px 16px;font-size:.85rem;letter-spacing:.12em}
+  h1{font-size:2.6rem;margin:10px 0 2px;letter-spacing:.04em}
+  h1 .num{color:var(--gold-deep)}
+  .tagline{font-size:1.15rem;color:var(--ink-soft)}
+  .hero-photo{margin:20px auto 6px;max-width:520px;border-radius:22px;overflow:hidden;
+    border:5px solid #fff;box-shadow:0 10px 28px rgba(90,60,20,.25);transform:rotate(-1.2deg)}
+  .hero-photo img{width:100%;display:block;aspect-ratio:16/10;object-fit:cover}
+  .hero-cap{font-size:.9rem;color:var(--ink-soft)}
+  .facts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 4px}
+  .fact{background:#fff;border:2px solid var(--gold);border-radius:999px;padding:3px 16px;font-size:.95rem}
+  /* sections */
+  section{margin-top:44px}
+  h2{font-size:1.55rem;text-align:center;margin-bottom:6px}
+  h2::before,h2::after{content:"🐾";font-size:1.05rem;margin:0 10px;opacity:.75}
+  .sec-lead{text-align:center;color:var(--ink-soft);margin-bottom:20px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:640px){.grid{grid-template-columns:1fr}h1{font-size:2rem}}
+  .point{background:var(--paper);border-radius:18px;overflow:hidden;
+    box-shadow:0 4px 14px rgba(90,60,20,.12)}
+  .point img{width:100%;display:block;aspect-ratio:16/8.5;object-fit:cover}
+  .point .body{padding:12px 18px 16px}
+  .point h3{font-size:1.12rem;margin-bottom:2px}
+  .point h3 .k{color:var(--gold-deep)}
+  /* example cards */
+  .cards{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
+  .gcard{width:158px;background:#fff;border-radius:14px;overflow:hidden;
+    box-shadow:0 5px 14px rgba(90,60,20,.18);position:relative}
+  .gcard:nth-child(odd){transform:rotate(-1.6deg)}
+  .gcard:nth-child(even){transform:rotate(1.4deg)}
+  .gcard img{width:100%;display:block;aspect-ratio:1/1.05;object-fit:cover}
+  .gcard .val{position:absolute;top:8px;left:8px;background:rgba(255,250,240,.94);
+    border:2px solid var(--gold);border-radius:10px;padding:0 9px;font-size:1.15rem;line-height:1.5}
+  .gcard .say{padding:8px 11px 11px;font-size:.82rem;line-height:1.55}
+  /* rules */
+  .rules{background:var(--paper);border-radius:18px;padding:20px 26px 10px;
+    box-shadow:0 4px 14px rgba(90,60,20,.12)}
+  .rules ol{margin-left:1.3em}
+  .rules li{margin-bottom:9px}
+  .rules .strong108{color:var(--red);font-weight:bold}
+  .specials{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+  @media(max-width:640px){.specials{grid-template-columns:1fr}}
+  .special{background:#fff;border:2px dashed var(--gold);border-radius:14px;padding:9px 15px;font-size:.95rem}
+  .special b{color:var(--gold-deep)}
+  /* bonno strip */
+  .strip{display:flex;gap:12px;overflow-x:auto;padding:6px 2px 12px}
+  .bonno{flex:0 0 168px;background:#fff;border-radius:14px;overflow:hidden;
+    box-shadow:0 4px 12px rgba(90,60,20,.15);text-align:center}
+  .bonno img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover}
+  .bonno .bn{padding:6px 8px 9px;font-size:.88rem}
+  .bonno .bn b{color:var(--gold-deep)}
+  /* join */
+  .join{background:var(--paper);border-radius:18px;padding:20px 26px;
+    box-shadow:0 4px 14px rgba(90,60,20,.12)}
+  .join ol{margin-left:1.3em}
+  .join li{margin-bottom:9px}
+  .cta{text-align:center;margin:26px 0 4px}
+  .cta a{display:inline-block;background:var(--gold);color:#fff;text-decoration:none;
+    font-size:1.2rem;border-radius:999px;padding:12px 38px;box-shadow:0 6px 16px rgba(168,132,42,.4)}
+  .cta a:hover{background:var(--gold-deep)}
+  .url{font-size:.9rem;color:var(--ink-soft);word-break:break-all;text-align:left}
+  .cta-row{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:12px;flex-wrap:wrap}
+  .qr{width:96px;height:96px;background:#fff;border:3px solid var(--gold);border-radius:14px;padding:5px}
+  footer{text-align:center;margin-top:46px;color:var(--ink-soft)}
+  footer .depart{font-size:1.3rem;color:var(--ink)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="hero">
+    <span class="badge">オンラインボードゲーム</span>
+    <h1>煩悩とねこ<span class="num">108</span></h1>
+    <p class="tagline">場の数字を108に近づけていく、バースト寸前のドキドキと、<br>ねこの癒やしが同居するゲームにゃ。</p>
+    <div class="hero-photo">
+      <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/78.jpg" alt="108カードのねこ">
+    </div>
+    <p class="hero-cap">108カードのお言葉：「108の煩悩、全部まとめて引き受けるにゃ！」</p>
+    <div class="facts">
+      <span class="fact">🐱 2〜7匹で対戦</span>
+      <span class="fact">🪙 小判3枚の脱落戦</span>
+      <span class="fact">📱 ブラウザだけ・登録不要</span>
+      <span class="fact">🤖 CPUねこも参加OK</span>
+    </div>
+  </div>
+
+  <section>
+    <h2>どんなゲーム？</h2>
+    <p class="sec-lead">みんなで場の合計を少しずつ積み上げて、108を超えたねこが負け。<br>それだけなのに、読み合いと運とねこで毎回ドラマが生まれるにゃ。</p>
+    <div class="grid">
+      <div class="point">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/120.jpg" alt="眠るねこ">
+        <div class="body">
+          <h3><span class="k">魅力1</span>　166枚、全部ちがうねこ</h3>
+          <p>手札58枚と、場に現れる煩悩108枚。合わせて166枚、ぜんぶ違うねこの写真。眠そうな顔、決めポーズ、なにかを企んでいる顔……。勝ち負けそっちのけで眺めてしまうにゃ。</p>
+        </div>
+      </div>
+      <div class="point">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/134.jpg" alt="跳ぶねこ">
+        <div class="body">
+          <h3><span class="k">魅力2</span>　お言葉が、ありがたい</h3>
+          <p>カード1枚ごとに、そのねこからの「ありがたいお言葉」がついている。「届かないと思ったら、跳んでみるにゃ」。ゲームの合間に読むだけでも楽しいにゃん。</p>
+        </div>
+      </div>
+      <div class="point">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/199.jpg" alt="第90の煩悩のねこ">
+        <div class="body">
+          <h3><span class="k">魅力3</span>　煩悩メーターが進んでいく</h3>
+          <p>場の合計が増えるたび、第1の煩悩「食欲」から第108の煩悩まで、順番にねこが登場。90を超えるとメーターが赤くなって、100を超えたらもう心臓に悪いにゃ。</p>
+        </div>
+      </div>
+      <div class="point">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/97.jpg" alt="水を飲むねこのドアップ">
+        <div class="body">
+          <h3><span class="k">魅力4</span>　小判3枚、落とせない戦い</h3>
+          <p>バーストすると小判を1枚失って、全部失うと脱落。＋50の一撃、108カードの強制フィニッシュ、DOUBLEの2連続プレイ……。終盤の逆転劇がクセになるにゃ。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>カードをちょい見せ</h2>
+    <p class="sec-lead">手札は全部で58枚。数字カードのほか、流れを変える特殊カードもあるにゃ。</p>
+    <div class="cards">
+      <div class="gcard">
+        <span class="val">＋1</span>
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/120.jpg" alt="＋1のねこ">
+        <p class="say">始まりは小さな寝息から。まず眠るにゃ</p>
+      </div>
+      <div class="gcard">
+        <span class="val">＋50</span>
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/97.jpg" alt="＋50のねこ">
+        <p class="say">喉が渇いたら、まず一杯。焦りは水に流すにゃ</p>
+      </div>
+      <div class="gcard">
+        <span class="val">108</span>
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/78.jpg" alt="108のねこ">
+        <p class="say">108の煩悩、全部まとめて引き受けるにゃ！</p>
+      </div>
+      <div class="gcard">
+        <span class="val">−10</span>
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/166.jpg" alt="−10のねこ">
+        <p class="say">うまくいかない日は、頭を垂れてやり過ごすにゃ</p>
+      </div>
+      <div class="gcard">
+        <span class="val">PASS</span>
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/81.jpg" alt="PASSのねこ">
+        <p class="say">今日はパス。大口開けて、明日に回すにゃ</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>ルールはかんたん</h2>
+    <p class="sec-lead">覚えるのはこれだけ。1局は数分で終わるにゃ。</p>
+    <div class="rules">
+      <ol>
+        <li>2〜7匹で対戦。みんな、小判3枚と手札3枚を持ってスタートするにゃ。</li>
+        <li>自分の番になったら、手札から1枚出す。場の合計がその分だけ変わる。出したら、山札から1枚引くにゃん。</li>
+        <li>場の合計は108を超えちゃダメ。どのカードを出しても超えてしまうときは<strong>バースト</strong>（煩悩に溺れちゃうにゃ）。そのラウンドの負けになって、小判を1枚失う。</li>
+        <li>負けたねこが、次のラウンドで最初に出すねこになる。小判を全部失ったら脱落。最後まで小判が残っていたねこの勝ちにゃ。</li>
+        <li>山札が尽きたら、捨て札をシャッフルして新しい山札にする（ラウンドはそのまま続く）。</li>
+        <li>合計がマイナスになるのはOK。出せるカードがあるときは、わざとバーストすることはできないにゃん。</li>
+      </ol>
+      <div class="specials">
+        <div class="special"><b>PASS</b>（3枚）：自分の番を次のねこに飛ばす。</div>
+        <div class="special"><b>TURN</b>（3枚）：進行方向が逆回りになる。</div>
+        <div class="special"><b>SHOT</b>（3枚）：次に出すねこを指名できる。そのあとは通常の順番に戻る。</div>
+        <div class="special"><b>DOUBLE</b>（3枚）：次のねこが「1枚出して1枚引く」を2回連続で行う。PASS・TURN・SHOTなら受け流せるにゃ。</div>
+        <div class="special"><b>108カード</b>（5枚）：出すと場の合計が強制的に<span class="strong108">108</span>になる。次のねこがプラスのカードを出せばバースト、さあ大変にゃ。</div>
+        <div class="special"><b>マイナスカード</b>（−1×2／−10×4）：合計を減らすカード。終盤の命綱にゃん。</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>場の煩悩ギャラリー</h2>
+    <p class="sec-lead">合計が進むと、こんな煩悩とねこに会えるにゃ。</p>
+    <div class="strip">
+      <div class="bonno">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/63.jpg" alt="第1の煩悩">
+        <p class="bn">第1の煩悩<br><b>食欲</b></p>
+      </div>
+      <div class="bonno">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/49.jpg" alt="第54の煩悩">
+        <p class="bn">第54の煩悩<br><b>言い訳をしたくなる心</b></p>
+      </div>
+      <div class="bonno">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/199.jpg" alt="第90の煩悩">
+        <p class="bn">第90の煩悩<br><b>ごまかしたい心</b></p>
+      </div>
+      <div class="bonno">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/70.jpg" alt="第107の煩悩">
+        <p class="bn">第107の煩悩<br><b>憤怒</b></p>
+      </div>
+      <div class="bonno">
+        <img src="https://ekawabe.github.io/bonno-to-neko-108-photos/13.jpg" alt="第108の煩悩">
+        <p class="bn">第108の煩悩<br><b>罪を隠そうとする心</b></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>あそび方（参加のしかた）</h2>
+    <div class="join">
+      <ol>
+        <li>下のボタンからゲームを開く。アプリのインストールも会員登録もいらないにゃ。</li>
+        <li>名前を入れて「ルームを作る」。4桁のルームIDが発行されるにゃん。</li>
+        <li>ロビーに表示される招待URLやQRコードを、一緒に遊ぶ人に送る。人数が足りなければCPUねこも足せる。</li>
+        <li>みんな揃ったらホストがゲーム開始。それでは、煩悩めぐりの旅へ出発にゃ！</li>
+      </ol>
+      <div class="cta">
+        <a href="https://bonno-to-neko-108.onrender.com/">🐾 あそびにいく</a>
+        <div class="cta-row">
+          <p class="url">https://bonno-to-neko-108.onrender.com/</p>
+          <img class="qr" src="data:image/png;base64,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" alt="ゲームへのQRコード">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p class="depart">負けてもねこが癒してくれる（たぶんにゃ）。</p>
+    <p>煩悩とねこ108 ― 108の煩悩をめぐる、ねこだらけのボードゲーム</p>
+  </footer>
+
+</div>
+</body>
+</html>
